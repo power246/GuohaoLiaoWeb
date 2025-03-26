@@ -1,0 +1,61 @@
+{% extends 'base.html' %} {% block title %}Project: Paul(Guohao) Liao{% endblock %} 
+{% load static %}
+
+{% block bodyClass %} projectBody {% endblock %}
+
+{% block hudButtons %}
+<button class="aboutMeButton">About Me</button>
+<button class="blogButton">Blog</button>
+<button class="experienceButton">Experience</button>
+<button class="projectButton on">Project</button>
+<button class="contactButton">Contact</button>
+{% endblock %}
+
+{% block pageName %}
+  PROJ.
+{% endblock %}
+
+{% block content %}
+<div class="contentBox projectHeight">
+  <div class="blogBoxes">
+    <div class="blogBox"> 
+      <h1 class="header">This web page:</h1>
+      <p>I made it myself by Django from begining &#58;&#41;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'thisWebPage' %}" class="hyperText">See More &#45;&#45;&gt;</a>
+      </p>
+    </div>
+    <div class="blogBox"> 
+      <h1 class="header">Discord Music Player Bot:</h1>
+      <p>A bot can play music in Discord voice channel.&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'discordMusicPlayerBot' %}" class="hyperText">See More &#45;&#45;&gt;</a>
+      </p>
+    </div>
+    <div class="blogBox"> 
+      <h1 class="header">Sokoban (Game):</h1>
+      <p>Sokoban is a classic puzzle game where players need to push boxes to a designated location.&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'sokoban' %}" class="hyperText">See More &#45;&#45;&gt;</a>
+      </p>
+    </div>
+    <div class="blogBox"> 
+      <h1 class="header">Othello (Game):</h1>
+      <p>Othello is a strategy board game where players pinch the opponent's pieces to flip them into their own color.&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'othello' %}" class="hyperText">See More &#45;&#45;&gt;</a>
+      </p>
+    </div>
+    <div class="blogBox"> 
+      <h1 class="header">UnoWar (Game):</h1>
+      <p>UnoWar is a card game that combines Uno with War rules.&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'unowar' %}" class="hyperText">See More &#45;&#45;&gt;</a>
+      </p>
+    </div>
+    <div class="blogBox"> 
+      <h1 class="header">Vector Calculator:</h1>
+      <p>It's a calculator that can input multiple vectors and output the angle and length of a new vector after adding all the vectors.&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'vectorCalculator' %}" class="hyperText">See More &#45;&#45;&gt;</a>
+      </p>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+    

@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block title %}Blog: Paul(Guohao) Liao{% endblock %} 
+{% load static %}
+
+{% block bodyClass %} blogBody {% endblock %}
+
+{% block hudButtons %}
+<button class="aboutMeButton">About Me</button>
+<button class="blogButton on">Blog</button>
+<button class="experienceButton">Experience</button>
+<button class="projectButton">Project</button>
+<button class="contactButton">Contact</button>
+{% endblock %}
+
+{% block pageName %}
+  BLOG
+{% endblock %}
+
+{% block content %}
+<div class="contentBox blogHeight">
+  <div class="blogBoxes">
+    <div class="blogBox"> 
+      <h1 class="header">GitHub:</h1>
+      <a href="https://github.com/power246" target="_blank" class="hyperText">power246: https://github.com/power246</a>
+    </div>
+    <div class="blogBox"> 
+      <h1 class="header">I only have a GitHub account now. If I have anything else in the future, I'll add it here &#58;&#41;</h1>
+    </div>
+  </div>
+</div>
+{% endblock %}

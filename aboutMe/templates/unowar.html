@@ -1,0 +1,142 @@
+{% extends 'base.html' %} {% block title %}UnoWar: Paul(Guohao) Liao{% endblock %} 
+{% load static %}
+
+{% block bodyClass %} UWBody {% endblock %}
+
+{% block hudButtons %}
+<button class="aboutMeButton">About Me</button>
+<button class="blogButton">Blog</button>
+<button class="experienceButton">Experience</button>
+<button class="projectButton on">Project</button>
+<button class="contactButton">Contact</button>
+{% endblock %}
+
+{% block pageName %}
+    UNOWAR
+{% endblock %}
+
+{% block content %}
+<div class="contentBox vexHeight">
+    <div class="back">
+        <p>
+            <a href="{% url 'project' %}" class="hyperText">&lt;&#45;&#45; BACK</a>
+        </p>
+    </div>
+    <div class="detailBoxes">
+        <div class="detail">
+            <h1 class="header">UnoWar (School Project):</h1>
+            <p>
+                <div class="fileExplorer">
+                    <ul class="folder">
+                        <b>&#x2193;&#x2193;&#x2193; Code Over Here !!! &#x2193;&#x2193;&#x2193;</b> 
+                        <li>
+                            <span class="folderName" onclick="toggleFolder(this)">📁 src (you can open it! )</span>
+                            <ul class="nested">
+                                <li>
+                                    <span class="folderName" onclick="toggleFolder(this)">📁 student</span>
+                                    <ul class="nested">
+                                        <li><span class="hyperText" onclick="openUWAI()">📄 AI.java </span></li>
+                                        <li><span class="hyperText" onclick="openUWBiggestCardAI()">📄 BiggestCardAI.java </span></li>
+                                        <li><span class="hyperText" onclick="openUWCard()">📄 Card.java </span></li>
+                                        <li><span class="hyperText" onclick="openUWCardPile()">📄 CardPile.java </span></li>
+                                        <li><span class="hyperText" onclick="openUWDeck()">📄 Deck.java </span></li>
+                                        <li><span class="hyperText" onclick="openUWHand()">📄 Hand.java </span></li>
+                                        <li><span class="hyperText" onclick="openUWSmallestCardAI()">📄 SmallestCardAI.java </span></li>
+                                        <li><span class="hyperText" onclick="openUWTournament()">📄 Tournament.java </span></li>
+                                        <li><span class="hyperText" onclick="openUWUnoWarMatch()">📄 UnoWarMatch.java </span></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="folderName" onclick="toggleFolder(this)">📁 test</span>
+                                    <ul class="nested">
+                                        <li><span class="hyperText" onclick="openUWAITest()">📄 AITest.java</span></li>
+                                        <li><span class="hyperText" onclick="openUWCardPileTest()">📄 CardPileTest.java</span></li>
+                                        <li><span class="hyperText" onclick="openUWCardTest()">📄 CardTest.java</span></li>
+                                        <li><span class="hyperText" onclick="openUWDeckTest()">📄 DeckTest.java</span></li>
+                                        <li><span class="hyperText" onclick="openUWHandTest()">📄 HandTest.java</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8942;</li>
+                        <li><b># you can open the codes! #</b></li>
+                    </ul>
+                </div>
+                {{ UnoWarIntro_en|safe }}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="modal-bg" onclick="closeModal()"></div>
+<div class="modal UWAI">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>AI.java</h2>
+    <pre><code>{{ UWAI }}</code></pre>
+</div>
+<div class="modal UWBiggestCardAI">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>BiggestCardAI.java</h2>
+    <pre><code>{{ UWBiggestCardAI }}</code></pre>
+</div>
+<div class="modal UWCard">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>Card.java</h2>
+    <pre><code>{{ UWCard }}</code></pre>
+</div>
+<div class="modal UWCardPile">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>CardPile.java</h2>
+    <pre><code>{{ UWCardPile }}</code></pre>
+</div>
+<div class="modal UWDeck">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>Deck.java</h2>
+    <pre><code>{{ UWDeck }}</code></pre>
+</div>
+<div class="modal UWHand">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>Hand.java</h2>
+    <pre><code>{{ UWHand }}</code></pre>
+</div>
+<div class="modal UWSmallestCardAI">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>SmallestCardAI.java</h2>
+    <pre><code>{{ UWSmallestCardAI }}</code></pre>
+</div>
+<div class="modal UWTournament">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>Tournament.java</h2>
+    <pre><code>{{ UWTournament }}</code></pre>
+</div>
+<div class="modal UWUnoWarMatch">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>UnoWarMatch.java</h2>
+    <pre><code>{{ UWUnoWarMatch }}</code></pre>
+</div>
+<div class="modal UWAITest">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>AITest.java</h2>
+    <pre><code>{{ UWAITest }}</code></pre>
+</div>
+<div class="modal UWCardPileTest">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>CardPileTest.java</h2>
+    <pre><code>{{ UWCardPileTest }}</code></pre>
+</div>
+<div class="modal UWCardTest">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>CardTest.java</h2>
+    <pre><code>{{ UWCardTest }}</code></pre>
+</div>
+<div class="modal-bg" onclick="closeModal()"></div>
+<div class="modal UWDeckTest">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>DeckTest.java</h2>
+    <pre><code>{{ UWDeckTest }}</code></pre>
+</div>
+<div class="modal UWHandTest">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>HandTest.java</h2>
+    <pre><code>{{ UWHandTest }}</code></pre>
+</div>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'base.html' %} {% block title %}Sokoban: Paul(Guohao) Liao{% endblock %} 
+{% load static %}
+
+{% block bodyClass %} sokobanBody {% endblock %}
+
+{% block hudButtons %}
+<button class="aboutMeButton">About Me</button>
+<button class="blogButton">Blog</button>
+<button class="experienceButton">Experience</button>
+<button class="projectButton on">Project</button>
+<button class="contactButton">Contact</button>
+{% endblock %}
+
+{% block pageName %}
+    SOKOBAN
+{% endblock %}
+
+{% block content %}
+<div class="contentBox vexHeight">
+    <div class="back">
+        <p>
+            <a href="{% url 'project' %}" class="hyperText">&lt;&#45;&#45; BACK</a>
+        </p>
+    </div>
+    <div class="detailBoxes">
+        <div class="detail">
+            <h1 class="header">Sokoban:</h1>
+            <p>
+                <figure class="image-left">
+                    <b># Click on the image to enlarge it #</b>
+                    <b># Click on the file to open it #</b>
+                    <img class="image" src="{% static 'images/sokobanPic.png' %}" alt="Sokaban Pic" onclick="openSokobanPic()">
+                    <figcaption>The begining of the game</figcaption>
+                    <img class="image" src="{% static 'images/sokobanPicWin.png' %}" alt="Win Sokaban Pic" onclick="openWinSokobanPic()">
+                    <figcaption>You win the game</figcaption>
+                    <span class="hyperText" onclick="openSokobanCode()">📄 sokoban.py</span>
+                </figure>
+                {{ sokobanIntro_en|safe }}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="modal-bg" onclick="closeModal()"></div>
+<div class="modal sokobanPic">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>Begining of the game</h2>
+    <img src="{% static 'images/sokobanPic.png' %}" alt="Sokaban Pic">
+</div>
+<div class="modal winSokobanPic">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>You win the game</h2>
+    <img src="{% static 'images/sokobanPicWin.png' %}" alt="Win Sokaban Pic">
+</div>
+<div class="modal sokobanCode">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>sokoban.py</h2>
+    <pre><code>{{ sokobanCode }}</code></pre>
+</div>
+{% endblock %}

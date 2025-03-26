@@ -1,0 +1,56 @@
+{% extends 'base.html' %} {% block title %}Othello: Paul(Guohao) Liao{% endblock %} 
+{% load static %}
+
+{% block bodyClass %} othelloBody {% endblock %}
+
+{% block hudButtons %}
+<button class="aboutMeButton">About Me</button>
+<button class="blogButton">Blog</button>
+<button class="experienceButton">Experience</button>
+<button class="projectButton on">Project</button>
+<button class="contactButton">Contact</button>
+{% endblock %}
+
+{% block pageName %}
+    OTHELLO
+{% endblock %}
+
+{% block content %}
+<div class="contentBox vexHeight">
+    <div class="back">
+        <p>
+            <a href="{% url 'project' %}" class="hyperText">&lt;&#45;&#45; BACK</a>
+        </p>
+    </div>
+    <div class="detailBoxes">
+        <div class="detail">
+            <h1 class="header">Othello (School Project):</h1>
+            <p>
+                <figure class="image-left">
+                    <b># Click on the file to open it #</b>
+                    <span class="hyperText" onclick="openOthello()">📄 othello.py</span>
+                    <span class="hyperText" onclick="openOthelloRR()">📄 random_vs_random_6x6.txt</span>
+                    <span class="hyperText" onclick="openOthelloHR()">📄 human_vs_random_4x4.txt</span>
+                </figure>
+                {{ othelloIntro_en|safe }}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="modal-bg" onclick="closeModal()"></div>
+<div class="modal othello">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>othello.py</h2>
+    <pre><code>{{ othello }}</code></pre>
+</div>
+<div class="modal othelloRR">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>random_vs_random_6x6.txt</h2>
+    <pre><code>{{ othelloRR }}</code></pre>
+</div>
+<div class="modal othelloHR">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>human_vs_random_4x4.txt</h2>
+    <pre><code>{{ othelloHR }}</code></pre>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+<b>Overview</b>
+This project is a personal website built using Django as the backend framework, combined with HTML, CSS, and JavaScript for frontend development. The goal is to create a personal portfolio that presents my experiences, projects, and skills in a clean and visually appealing manner.
+
+<b>Features</b>
+<b>&#8226; Homepage:</b> A simple welcome page introducing my basic information.
+<b>&#8226; About Me:</b> A detailed introduction to my background, interests, and programming journey.
+<b>&#8226; Projects:</b> A dedicated page showcasing the projects I have worked on, including this website itself.
+<b>&#8226; Experience:</b> A section displaying my experience in VEX Robotics, programming, and other technical fields.
+
+<b>Dynamic Content</b>
+&#8226; Utilizing Django's template system ({% block %}) to enable reusable web structures.
+&#8226; Reading text content from .txt files for flexible content management and easy updates.
+&#8226; Custom CSS to dynamically wrap text around images.
+
+<b>Interactive Elements</b>
+&#8226; Internal hyperlinks for seamless navigation between different pages.
+&#8226; CSS animations and hover effects to enhance the visual experience.
+&#8226; Responsive Design: Ensuring the website displays well across various devices and screen sizes.
+
+<b>Tech Stack</b>
+<b>&#8226; Backend:</b> Django (Python)
+<b>&#8226; Frontend:</b> HTML, CSS, JavaScript
+<b>&#8226; Styling:</b> CSS Flexbox, Grid, and custom layouts
+<b>&#8226; Hosting:</b> (To be determined, potential options include GitHub Pages, Heroku, or AWS)
+
+<b>Challenges & Solutions</b>
+<b>&#8226; Dynamic Text Formatting:</b> Initially, preserving formatting when reading text from .txt files was challenging. I solved this by using Python's .replace() method to convert specific text into HTML-compatible formats, ensuring proper line breaks and dynamically handling hyperlinks.
+<b>&#8226; Multi-page Layout Inheritance:</b> I utilized Django's template inheritance mechanism to enable multiple pages to share a consistent layout, improving maintainability and code reusability.
+<b>&#8226; URL Management:</b> Instead of hardcoding links, I used Django's reverse() method to dynamically generate URLs, making the site easier to maintain.
+
+<b>Future Improvements</b>
+&#8226; Implement user data tracking to analyze time spent on each page and optimize content accordingly.
+&#8226; Expand the Projects section with more detailed descriptions and interactive elements.
+&#8226; Further enhance CSS responsiveness for better adaptability across different devices.
+
+This project not only showcases my technical skills but also reflects my passion for web development. It is still a work in progress, and I look forward to continuously improving and expanding its functionalities in the future!

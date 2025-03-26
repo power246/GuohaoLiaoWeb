@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Paul(Guohao) Liao{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+  </head>
+  <body class="{% block bodyClass %} baseBody {% endblock %}">
+    <div class="hud">
+      <div class="hudNameContainer">
+        <div class="myName1">GUOHAO LIAO</div>
+        <div class="myName2">廖果昊</div>
+      </div>
+    </div>
+    <div class="hudButton">
+      <div class="buttonsContainer">
+        {% block hudButtons %}
+        <button class="aboutMeButton on">About Me</button>
+        <button class="blogButton">Blog</button>
+        <button class="experienceButton">Experience</button>
+        <button class="projectButton">Project</button>
+        <button class="contactButton">Contact</button>
+        {% endblock %}
+        <!--
+        <button class="languageButton" title="change language to Chinese">
+          <img
+            src="{% static 'images/languageWhite.png' %}"
+            alt="Language"
+            width="20"
+            height="20"
+          />
+        </button>
+        -->
+      </div>
+    </div>
+    <div class="leftHud">
+      <div class="pageName">{% block pageName %}HOME{% endblock %}</div>
+    </div>
+    {% block content %}
+    <div class="contentBox baseHeight">
+      <div class="profile"></div>
+      <div class="aboutMeContent">
+        <h1 class="header">
+          SKILLS
+        </h1>
+        <p class="selfIntroduction">
+          {{ skills_en|safe }}
+        </p>
+        <h1 class="header">
+          SELF-INTRODUCTION
+        </h1>
+        <p class="selfIntroduction">
+          {{ intro_en|safe }}
+        </p>
+      </div>
+    </div>
+    {% endblock %}
+    <div class="bodyBackground"></div>
+    <div class="footer">
+      <div class="footer-content">Made with ❤️ by Paul(Guohao) Liao</div>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

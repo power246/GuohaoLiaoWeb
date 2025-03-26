@@ -1,0 +1,49 @@
+<b>Overview:</b>
+A simple Push Box (Sokoban) game developed using Python and the pyphysicssandbox library. The game features classic level design, where players control a character to push boxes to target positions. Currently, only a single-level mode is implemented, with plans to expand to more creative levels in the future.
+
+<b>Features:</b>
+<b>&#8226; Core Gameplay</b>
+	<b>&#9702; Character Control:</b> Move the player (green sphere) using W/A/S/D keys.
+	<b>&#9702; Box Interaction:</b> Push blue boxes towards yellow target areas (collision detection logic).
+	<b>&#9702; Winning Condition:</b> The game displays "YOU WIN!" when all boxes reach their designated targets.
+	<b>&#9702; Physics Engine:</b> Uses pyphysicssandbox to simulate movement and collisions.
+<b>&#8226; Level Design</b>
+	<b>&#9702; Map System:</b> Walls (red blocks) and target areas (yellow blocks) are defined using coordinate arrays.
+	<b>&#9702; Dynamic Updates:</b> Real-time box position detection to prevent overlapping or passing through walls.
+<b>&#8226; Code Structure</b>
+	<b>&#9702; Modular Functions:</b>
+		<b>box_move():</b> Handles movement logic.
+		<b>box_finish():</b> Checks win conditions.
+	<b>&#9702; Global State Management:</b> Tracks player and box positions using variables like f/g.
+
+<b>Tech Stack:</b>
+<b>&#8226; Python:</b> Core programming language
+<b>&#8226; pyphysicssandbox:</b> Physics engine (collision & movement simulation)
+<b>&#8226; Coordinate System:</b> Manages map, character, and box positions
+
+<b>Challenges & Solutions:</b>
+<b>&#8226; Box Collision Logic:</b> Prevent box overlap or wall penetration using coordinate checks (h1 == i or h1 == h2 conditions).
+<b>&#8226; Winning Condition Detection:</b> Loop through all box positions and check if they match target coordinates (h2 == (300,200), etc.).
+<b>&#8226; Library Dependency Issues:</b> Provide installation guide for pyphysicssandbox (pip install pyphysicssandbox).
+
+<b>How to Run</b>
+<b>&#8226; Install Dependencies</b>
+	pip install pyphysicssandbox
+<b>&#8226; Start the Game</b>
+	python push_box.py
+<b>&#8226; Controls</b>
+	&#9702; Move Character: W/A/S/D keys
+	&#9702; Push Boxes: Move the blue boxes onto yellow target areas
+
+<b>Future Improvements</b>
+<b>&#8226; Level Expansion:</b> Add multiple levels, such as mazes or moving obstacles.
+<b>&#8226; UI Enhancements:</b> Implement a start menu and level selection.
+<b>&#8226; Error Handling:</b> Improve out-of-bounds detection and exception handling.
+<b>&#8226; Performance Optimization:</b> Reduce global variable usage and refactor using OOP principles (classes & objects).
+
+<b>Through this project, I have practiced:</b>
+&#8226; Physics engine integration (pyphysicssandbox)
+&#8226; 2D game logic design (coordinate system & state management)
+&#8226; User input handling & real-time rendering
+
+<b>Note:</b> This is an early prototype, and future updates will be made based on user feedback. If you encounter any issues, please check your library installation and Python version (recommended: 3.7+).

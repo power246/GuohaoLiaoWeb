@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block title %}Contact: Paul(Guohao) Liao{% endblock %} 
+{% load static %}
+
+{% block bodyClass %} contactBody {% endblock %}
+
+{% block hudButtons %}
+<button class="aboutMeButton">About Me</button>
+<button class="blogButton">Blog</button>
+<button class="experienceButton">Experience</button>
+<button class="projectButton">Project</button>
+<button class="contactButton on">Contact</button>
+{% endblock %}
+
+{% block pageName %}
+  CONT.
+{% endblock %}
+
+{% block content %}
+<div class="contentBox contactHeight">
+  <div class="blogBoxes">
+    <div class="blogBox"> 
+      <h1 class="header">E-mail:</h1>
+      <a href="mailto:liao0238@umn.edu" target="_blank" class="hyperText">liao0238@umn.edu</a>
+    </div>
+    <div class="blogBox"> 
+      <h1 class="header">Phone Number:</h1>
+      <p>
+        Please see it in my resume. I don't want to put it here due to safety reasons. Sorry for the inconvenience &#58;&#40;
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

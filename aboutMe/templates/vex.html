@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% block title %}VEX: Paul(Guohao) Liao{% endblock %} 
+{% load static %}
+
+{% block bodyClass %} vexBody {% endblock %}
+
+{% block hudButtons %}
+<button class="aboutMeButton">About Me</button>
+<button class="blogButton">Blog</button>
+<button class="experienceButton on">Experience</button>
+<button class="projectButton">Project</button>
+<button class="contactButton">Contact</button>
+{% endblock %}
+
+{% block pageName %}
+  VEX
+{% endblock %}
+
+{% block content %}
+<div class="contentBox vexHeight">
+    <div class="back">
+        <p>
+            <a href="{% url 'experience' %}" class="hyperText">&lt;&#45;&#45; BACK</a>
+        </p>
+    </div>
+    <div class="detailBoxes">
+        <div class="detail">
+            <h1 class="header">VEX Robotics Competition:</h1>
+            <p>
+                <figure class="image-left">
+                    <img class="image" src="{% static 'images/vexProgramming.jpg' %}" alt="VEX Programming">
+                    <figcaption>I was programming a VEX robot</figcaption>
+                    <img class="image" src="{% static 'images/vexBot.jpg' %}" alt="VEX Robot">
+                    <figcaption>The robot we built</figcaption>
+                    <img class="image" src="{% static 'images/groupPhoto.jpg' %}" alt="VEX Group Photo">
+                    <figcaption>The group photo, I'm the middle one with 88866B</figcaption>
+                </figure>
+                {{ vex_en|safe }}
+            </p>
+            <p>
+                <a href="https://www.vexrobotics.com/competition" class="hyperText" target="_blank">VEX Official Web &#45;&#45;&gt;</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
