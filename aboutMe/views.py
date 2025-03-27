@@ -51,7 +51,7 @@ def vex(request):
 
 def discordMusicPlayerBot(request):
     dcBotIntro_en_path = os.path.join(settings.BASE_DIR, 'aboutMe/static/text/dcBotIntro_en.txt')
-    dcBot_path = os.path.join(settings.BASE_DIR, 'aboutMe/static/text/discord_bot.py')
+    dcBot_path = os.path.join(settings.BASE_DIR, 'aboutMe/static/text/dc_bot.py')
     try:
         with open(dcBot_path, 'r', encoding='utf-8') as dcBot_file:
             dcBotCode = dcBot_file.read()
