@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block title %}Vector: Paul(Guohao) Liao{% endblock %} 
+{% load static %}
+
+{% block bodyClass %} vectorBody {% endblock %}
+
+{% block hudButtons %}
+<button class="aboutMeButton">About Me</button>
+<button class="blogButton">Blog</button>
+<button class="experienceButton">Experience</button>
+<button class="projectButton on">Project</button>
+<button class="contactButton">Contact</button>
+{% endblock %}
+
+{% block pageName %}
+    VECTOR
+{% endblock %}
+
+{% block content %}
+<div class="contentBox vexHeight">
+    <div class="back">
+        <p>
+            <a href="{% url 'project' %}" class="hyperText">&lt;&#45;&#45; BACK</a>
+        </p>
+    </div>
+    <div class="detailBoxes">
+        <div class="detail">
+            <h1 class="header">Vector Calculator:</h1>
+            <p>
+                <figure class="image-left">
+                    <b># Click on the file to open it #</b>
+                    <span class="hyperText" onclick="openVector3()">📄 vector3.py</span>
+                </figure>
+                {{ vectorIntro_en|safe }}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="modal-bg" onclick="closeModal()"></div>
+<div class="modal vector3">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>vector3.py</h2>
+    <pre><code>{{ vector3 }}</code></pre>
+</div>
+{% endblock %}

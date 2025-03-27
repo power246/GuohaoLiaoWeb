@@ -1,0 +1,842 @@
+html {
+  background-color: #212121;
+}
+body {
+  position: relative;
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  overflow: hidden;
+  height: 2500px;
+  z-index: 0;
+  overflow-y: auto;
+}
+.baseBody {
+  height: 1550px;
+}
+.blogBody {
+  height: 100vh;
+}
+.contactBody {
+  height: 2000px;
+}
+.experienceBody {
+  height: 100vh;
+}
+.projectBody {
+  height: 1500px;
+}
+.vexBody {
+  height: 1200px;
+}
+.thisWebPageBody{
+  height: 1700px;
+}
+.dcBotBody{
+  height: 1700px;
+}
+.othelloBody{
+  height: 1700px;
+}
+.UWBody{
+  height: 1700px;
+}
+.vectorBody{
+  height: 1700px;
+}
+.sokobanBody{
+  height: 1500px;
+}
+.bodyBackground {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #212121;
+  background-image: url("/static/images/background_dot.png");
+  background-size: contain;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.hud {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 8px 2vw;
+  background: linear-gradient(to bottom, #000000 15%, transparent);
+  /*background-color: black;*/
+  border-bottom: 1.5px solid rgb(172, 172, 172);
+  box-shadow: 0px 0px 10px cyan;
+  z-index: 1000;
+}
+.hudButton {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 8px 0;
+  z-index: 1001;
+}
+.buttonsContainer {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+  width: 100%;
+  /*background-color: rgb(0, 89, 255);*/
+  margin-right: 20px;
+}
+.hudNameContainer {
+  font-size: 22px;
+  width: 175px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*background-color: rgb(0, 255, 94);*/
+  padding: 0 0;
+}
+.myName1 {
+  /*background-color: rgb(255, 0, 0);*/
+  font-weight: bold;
+  color: rgb(220, 220, 220);
+}
+.myName2 {
+  /*background-color: rgb(0, 4, 255);*/
+  font-weight: bold;
+  color: rgb(220, 220, 220);
+}
+.leftHud {
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  left: 0;
+  padding: 0 0;
+  /*background: linear-gradient(to bottom, #000000 15%, transparent);*/
+  background-color: transparent;
+  border-right: 1.5px solid rgb(172, 172, 172);
+  box-shadow: 0px 0px 10px cyan;
+  z-index: 999;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+.pageName {
+  position: absolute;
+  left: 23%;
+  writing-mode: sideways-lr;
+  font-size: 200px;
+  background-image: linear-gradient(to right, rgb(108, 108, 108), #212121);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: bold;
+  color: transparent;
+}
+.languageButton {
+  background: none;
+}
+.aboutMeButton {
+  background: none;
+}
+.aboutMeButton.on {
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 255, 255, 0.8) 100%
+  );
+  border-bottom: 1.5px solid rgba(0, 255, 255, 0.8);
+}
+.blogButton {
+  background: none;
+}
+.experienceButton {
+  background: none;
+}
+.projectButton {
+  background: none;
+}
+.contactButton {
+  background: none;
+}
+.on {
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 255, 255, 0.8) 100%
+  );
+  border-bottom: 1.5px solid rgba(0, 255, 255, 0.8);
+}
+.contentBox {
+  position: absolute;
+  left: 175px;
+  top: 80px;
+  width: 90%;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: #3a0000;*/
+  color: rgb(212, 212, 212);
+  z-index: 500;
+}
+.baseHeight {
+  height: 1400px;
+}
+.blogHeight {
+  height: 200px;
+}
+.contactHeight {
+  height: 300px;
+}
+.experienceHeight {
+  height: 200px;
+}
+.projectHeight {
+  height: 500px;
+}
+.vexHeight {
+  height: 600px;
+}
+button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  height: 4.8em;
+  color: rgb(220, 220, 220);
+}
+button:hover {
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(172, 172, 172, 0.8) 100%
+  );
+  border-bottom: 1.5px solid rgba(172, 172, 172, 0.8);
+}
+.footer {
+  position: absolute;
+  font-size: 16px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #292929;
+  color: white;
+  border-top: 1.5px solid rgb(172, 172, 172);
+  box-shadow: 0px 0px 10px cyan;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1003;
+}
+.profile {
+  position: absolute;
+  left: 50px;
+  width: 300px;
+  top: 40px;
+  background-image: url("/static/images/defaultPic1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  z-index: 502;
+}
+.profile::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 1px;
+  height: 140%;
+  background-color: rgba(172, 172, 172, 0.9);
+  box-shadow: 4px 0px 8px cyan;
+}
+.profile::before {
+  content: "Please click on pic to show my profile :)";
+  position: absolute;
+  bottom: -5px;
+  left: -5px;
+  width: 120%;
+  height: 1px;
+  background-color: rgba(172, 172, 172, 0.9);
+  box-shadow: 0px 4px 8px cyan;
+}
+.aboutMeContent {
+  position: absolute;
+  right: 150px;
+  width: 50vw;
+  top: 25px;
+  /*background-color: #50ddfd;*/
+  z-index: 501;
+}
+.header {
+  color: rgb(230, 230, 230);
+  /*background-color: #007893;*/
+  margin-top: 5px;
+  font-weight: bold;
+}
+.selfIntroduction {
+  color: rgb(220, 220, 220);
+  font-size: 18px;
+  line-height: 1.8;
+}
+.blogBoxes {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*background-color: #dd6868;*/
+  color: rgb(212, 212, 212);
+  z-index: 501;
+}
+.blogBox {
+  position: relative;
+  width: 75vw;
+  height: 130px;
+  /*background-color: #c61e1e;*/
+  padding: 20px;
+}
+.blogBox::after {
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(172, 172, 172, 0.9);
+  box-shadow: 0px 4px 8px cyan;
+}
+.hyperText {
+  color: rgb(0, 255, 255);
+}
+.back {
+  position: absolute;
+  width: 75vw;
+  left: 10px;
+  top: 0%;
+  /*background-color: #3efc93;*/
+  z-index: 501;
+}
+.detailBoxes {
+  position: absolute;
+  left: 0px;
+  width: 85vw;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*background-color: #fd4646;*/
+  color: rgb(212, 212, 212);
+  z-index: 501;
+}
+.detail {
+  position: absolute;
+  top: 0;
+  width: 75vw;
+  left: 30px;
+  /*background-color: #5a3efc;*/
+  z-index: 501;
+}
+figure {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  /*background-color: #b9b5d0;*/
+}
+figure::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 0px;
+  width: 1px;
+  height: calc(100% + 10px);
+  background-color: rgba(172, 172, 172, 0.9);
+  box-shadow: 4px 0px 8px cyan;
+}
+.image-left {
+  float: left;
+  margin-right: 20px;
+}
+.image {
+  width: 200px;
+}
+figcaption {
+  font-style: italic;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.modal {
+  color: rgb(220, 220, 220);
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 70%;
+  background-color: #212121;
+  box-shadow: 0px 0px 10px cyan;
+  border-radius: 8px;
+  overflow: auto;
+  padding: 20px;
+}
+.views {
+  position: fixed;
+}
+.urls {
+  position: fixed;
+}
+.sty {
+  position: fixed;
+}
+.scr {
+  position: fixed;
+}
+.ba {
+  position: fixed;
+}
+.thisWeb {
+  position: fixed;
+}
+.dcBotPic{
+  width: 90%;
+}
+.dcBotCode{
+  position: fixed;
+}
+.sokobanCode{
+  position: fixed;
+}
+.sokobanPic{
+  position: fixed;
+}
+.winSokobanPic{
+  position: fixed;
+}
+.othello{
+  position: fixed;
+}
+.othelloRR{
+  position: fixed;
+}
+.othelloHR{
+  position: fixed;
+}
+.UWAITest{
+  position: fixed;
+}
+.UWCardPileTest{
+  position: fixed;
+}
+.UWCardTest{
+  position: fixed;
+}
+.UWDeckTest{
+  position: fixed;
+}
+.UWHandTest{
+  position: fixed;
+}
+.UWAI{
+  position: fixed;
+}
+.UWBiggestCardAI{
+  position: fixed;
+}
+.UWCard{
+  position: fixed;
+}
+.UWCardPile{
+  position: fixed;
+}
+.UWDeck{
+  position: fixed;
+}
+.UWHand{
+  position: fixed;
+}
+.UWSmallestCardAI{
+  position: fixed;
+}
+.UWTournament{
+  position: fixed;
+}
+.UWUnoWarMatch{
+  position: fixed;
+}
+.vector3{
+  position: fixed;
+}
+.modal-bg {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.close-btn {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+pre {
+  background: #2b2b2b;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+.fileExplorer {
+  position: relative;
+  float: left;
+  margin-right: 25px;
+  margin-bottom: 5px;
+  max-width: 400px;
+  padding: 0px; 
+}
+.fileExplorer::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  width: 1px;
+  height: calc(100% + 15px);
+  background-color: rgba(172, 172, 172, 0.9);
+  box-shadow: 4px 0px 8px cyan;
+}
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+.folderName {
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(0, 255, 255);
+}
+.folderName:hover {
+  text-decoration: underline;
+}
+.nested {
+  display: none;
+}
+.active {
+  display: block;
+}
+@media (max-width: 768px) {
+  /* 手机布局样式 */
+  :root {
+    --ratio: calc(768 / 1920);
+  }
+  .hud {
+    height: calc(80px * var(--ratio));
+    padding: 7px 2vw;
+  }
+  .hudButton {
+    height: calc(80px * var(--ratio));
+    padding: 7px 0;
+  }
+  .buttonsContainer {
+    gap: calc(30px * var(--ratio));
+  }
+  .hudNameContainer {
+    font-size: calc(22px * var(--ratio));
+    width: calc(175px * var(--ratio));
+  }
+  .leftHud {
+    width: calc(250px * var(--ratio));
+  }
+  .pageName {
+    font-size: calc(200px * var(--ratio));
+  }
+  button {
+    font-size: calc(22px * var(--ratio));
+    height: 5.2em;
+  }
+  .contentBox {
+    left: calc(250px * var(--ratio));
+    top: calc(117px * var(--ratio));
+  }
+  .profile {
+    left: calc(40px * var(--ratio));
+    width: calc(300px * var(--ratio));
+    height: calc(300px * var(--ratio));
+  }
+  .aboutMeContent {
+    right: calc(150px * var(--ratio));
+  }
+  .baseBody {
+    height: 4350px;
+  }
+  .vexBody {
+    height: 2650px;
+  }
+  .webBody {
+    height: 2000px;
+  }
+  .image {
+    width: calc(300px * var(--ratio));
+  }
+  figure {
+    width: calc(320px * var(--ratio));
+  }
+  .thisWebPageBody{
+    height: 1850px;
+  }
+  .dcBotBody{
+    height: 1600px;
+  }
+  .sokobanBody{
+    height: 2150px;
+  }
+  .othelloBody{
+    height: 1850px;
+  }
+  .UWBody{
+    height: 1930px;
+  }
+  .vectorBody{
+    height: 2250px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* 平板布局样式 */
+  :root {
+    --ratio: calc(1024 / 1920);
+  }
+  .hud {
+    height: calc(80px * var(--ratio));
+    padding: 7px 2vw;
+  }
+  .hudButton {
+    height: calc(80px * var(--ratio));
+    padding: 7px 0;
+  }
+  .buttonsContainer {
+    gap: calc(30px * var(--ratio));
+  }
+  .hudNameContainer {
+    font-size: calc(22px * var(--ratio));
+    width: calc(175px * var(--ratio));
+  }
+  .leftHud {
+    width: calc(250px * var(--ratio));
+  }
+  .pageName {
+    font-size: calc(200px * var(--ratio));
+  }
+  button {
+    font-size: calc(22px * var(--ratio));
+    height: 4.8em;
+  }
+  .contentBox {
+    left: calc(250px * var(--ratio));
+    top: calc(107px * var(--ratio));
+  }
+  .profile {
+    left: calc(50px * var(--ratio));
+    width: calc(300px * var(--ratio));
+    height: calc(300px * var(--ratio));
+  }
+  .aboutMeContent {
+    right: calc(150px * var(--ratio));
+  }
+  .baseBody {
+    height: 2900px;
+  }
+  .vexBody {
+    height: 1850px;
+  }
+  .image {
+    width: calc(300px * var(--ratio));
+  }
+  figure {
+    width: calc(320px * var(--ratio));
+  }
+  .thisWebPageBody{
+    height: 1500px;
+  }
+  .dcBotBody{
+    height: 1250px;
+  }
+  .sokobanBody{
+    height: 1750px;
+  }
+  .othelloBody{
+    height: 1400px;
+  }
+  .UWBody{
+    height: 1500px;
+  }
+  .vectorBody{
+    height: 1900px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  /* 小型笔记本布局样式 */
+  :root {
+    --ratio: calc(1440 / 1920);
+  }
+  .hud {
+    height: calc(80px * var(--ratio));
+    padding: 7px 2vw;
+  }
+  .hudButton {
+    height: calc(80px * var(--ratio));
+    padding: 7px 0;
+  }
+  .buttonsContainer {
+    gap: calc(30px * var(--ratio));
+  }
+  .hudNameContainer {
+    font-size: calc(22px * var(--ratio));
+    width: calc(175px * var(--ratio));
+  }
+  .leftHud {
+    width: calc(250px * var(--ratio));
+  }
+  .pageName {
+    font-size: calc(200px * var(--ratio));
+  }
+  button {
+    font-size: calc(22px * var(--ratio));
+    height: 4.5em;
+  }
+  .contentBox {
+    left: calc(250px * var(--ratio));
+    top: calc(99px * var(--ratio));
+  }
+  .profile {
+    left: calc(50px * var(--ratio));
+    width: calc(300px * var(--ratio));
+    height: calc(300px * var(--ratio));
+  }
+  .aboutMeContent {
+    right: calc(150px * var(--ratio));
+  }
+  .baseBody {
+    height: 2300px;
+  }
+  .vexBody {
+    height: 1600px;
+  }
+  .image {
+    width: calc(300px * var(--ratio));
+  }
+  figure {
+    width: calc(320px * var(--ratio));
+  }
+  .thisWebPageBody{
+    height: 1250px;
+  }
+  .dcBotBody{
+    height: 1100px;
+  }
+  .sokobanBody{
+    height: 1650px;
+  }
+  .othelloBody{
+    height: 1300px;
+  }
+  .UWBody{
+    height: 1250px;
+  }
+  .vectorBody{
+    height: 1600px;
+  }
+}
+@media (min-width: 1440px) {
+  /* 大型笔记本和台式机布局样式 */
+  .hud {
+    height: 80px;
+    padding: 8px 2vw;
+  }
+  .hudButton {
+    height: 80px;
+    padding: 8px 0;
+  }
+  .buttonsContainer {
+    gap: 30px;
+  }
+  .hudNameContainer {
+    font-size: 22px;
+    width: 175px;
+  }
+  .leftHud {
+    width: 250px;
+  }
+  .pageName {
+    font-size: 190px;
+  }
+  button {
+    font-size: 22px;
+    height: 4.45em;
+  }
+  .contentBox {
+    left: 250px;
+    top: 96px;
+  }
+  .profile {
+    left: 50px;
+    width: 300px;
+    height: 300px;
+  }
+  .aboutMeContent {
+    right: 150px;
+  }
+  .baseBody {
+    height: 1730px;
+  }
+  .vexBody {
+    height: 1400px;
+  }
+  .image {
+    width: 300px;
+  }
+  figure {
+    width: 320px;
+  }
+  .thisWebPageBody{
+    height: 1200px;
+  }
+  .dcBotBody{
+    height: 1100px;
+  }
+  .sokobanBody{
+    height: 1500px;
+  }
+  .othelloBody{
+    height: 1100px;
+  }
+  .UWBody{
+    height: 1200px;
+  }
+  .vectorBody{
+    height: 1600px;
+  }
+}

@@ -1,0 +1,4 @@
+<b>Programming Languages:</b> Python, Java, C, HTML, CSS, JS, OCaml, LaTeX, Julia 
+<b>Development Tools:</b> Visual Studio, Intelli IDEA, IDLE, Anaconda, Django
+<b>Other:</b> Unix/Linux, Windows, gdb, Excel, PR, PS 
+<b>Language:</b> English, Mandarin Chinese, (little bit of )Japanese 

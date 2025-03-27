@@ -1,0 +1,116 @@
+{% extends 'base.html' %} {% block title %}Web: Paul(Guohao) Liao{% endblock %} 
+{% load static %}
+
+{% block bodyClass %} thisWebPageBody {% endblock %}
+
+{% block hudButtons %}
+<button class="aboutMeButton">About Me</button>
+<button class="blogButton">Blog</button>
+<button class="experienceButton">Experience</button>
+<button class="projectButton on">Project</button>
+<button class="contactButton">Contact</button>
+{% endblock %}
+
+{% block pageName %}
+    WEB
+{% endblock %}
+
+{% block content %}
+<div class="contentBox vexHeight">
+    <div class="back">
+        <p>
+            <a href="{% url 'project' %}" class="hyperText">&lt;&#45;&#45; BACK</a>
+        </p>
+    </div>
+    <div class="detailBoxes">
+        <div class="detail">
+            <h1 class="header">Personal Website:</h1>
+            <p>
+                <div class="fileExplorer">
+                    <ul class="folder">
+                        <b>&#x2193;&#x2193;&#x2193; Code Over Here !!! &#x2193;&#x2193;&#x2193;</b> 
+                        <li>
+                            <span class="folderName" onclick="toggleFolder(this)">📁 myWeb (you can open it! )</span>
+                            <ul class="nested">
+                                <li>
+                                    <span class="folderName" onclick="toggleFolder(this)">📁 aboutMe</span>
+                                    <ul class="nested">
+                                        <li>
+                                            <span class="folderName" onclick="toggleFolder(this)">📁 static</span>
+                                            <ul class="nested">
+                                                <li>📁 images (not shown)</li>
+                                                <li>
+                                                    <span class="folderName" onclick="toggleFolder(this)">📁 css</span>
+                                                    <ul class="nested">
+                                                        <li><span class="hyperText" onclick="openModalSty()">📄 styles.css</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span class="folderName" onclick="toggleFolder(this)">📁 js</span>
+                                                    <ul class="nested">
+                                                        <li><span class="hyperText" onclick="openModalScr()">📄 script.js </span></li>
+                                                    </ul>
+                                                </li>
+                                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8942;</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="folderName" onclick="toggleFolder(this)">📁 templates</span>
+                                            <ul class="nested">
+                                                <li><span class="hyperText" onclick="openModalBa()">📄 base.html </span></li>
+                                                <li><span class="hyperText" onclick="openModalThisWeb()">📄 thisWebPage.html </span></li>
+                                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8942;</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="hyperText" onclick="openModalViews()">📄 views.py </span>
+                                        </li>
+                                        <li>
+                                            <span class="hyperText" onclick="openModalUrls()">📄 urls.py </span>
+                                        </li>
+                                        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8942;</li>
+                                    </ul>
+                                    <li><b># you can open the codes! #</b></li>
+                                    <li><b># some didn't show for safety #</b></li>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                {{ this_web_en|safe }}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="modal-bg" onclick="closeModal()"></div>
+<div class="modal views">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>views.py</h2>
+    <pre><code>{{ views }}</code></pre>
+</div>
+<div class="modal urls">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>urls.py</h2>
+    <pre><code>{{ urls }}</code></pre>
+</div>
+<div class="modal sty">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>styles.css</h2>
+    <pre><code>{{ sty }}</code></pre>
+</div>
+<div class="modal scr">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>scr.js</h2>
+    <pre><code>{{ scr }}</code></pre>
+</div>
+<div class="modal ba">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>base.html</h2>
+    <pre><code>{{ ba }}</code></pre>
+</div>
+<div class="modal thisWeb">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>thisWebPage.html</h2>
+    <pre><code>{{ thisWeb }}</code></pre>
+</div>
+{% endblock %}

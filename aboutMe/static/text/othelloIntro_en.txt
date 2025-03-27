@@ -1,0 +1,33 @@
+<b>Overview</b>
+This project is an implementation of the Othello (Reversi) game in Python. It supports different types of players (human, random AI, simple AI) and allows gameplay on a rectangular board of any size. The project is the first programming assignment for the CSCI 1913 course, following the specifications and requirements provided by the course.
+
+<b>Features</b>
+<b>&#8226; Game Rules:</b> The game follows the standard Othello (Reversi) rules, where players take turns placing their pieces and flipping the opponent’s pieces according to the rules.
+<b>&#8226; Board Initialization:</b> A rectangular board of any size can be created, and the initial four pieces are automatically placed.
+<b>&#8226; Valid Move Check:</b> The game checks whether a player's input is a valid move, ensuring the correctness of the game rules.
+<b>&#8226; Game Modes:</b> Supports various battle modes, including:
+	&#9702; Human vs Random AI
+	&#9702; AI vs Random AI
+	&#9702; Random AI vs Random AI
+<b>&#8226; AI Logic:</b> The game offers two types of AI:
+<b>&#8226; Random AI:</b> Selects a move randomly from all valid move locations.
+<b>&#8226; Simple AI:</b> Chooses the move that flips the most opponent pieces.
+<b>&#8226; Board Visualization:</b> The board state is displayed in the terminal using ASCII characters, with different colored pieces represented by (⚫ and ⚪).
+
+<b>Tech Stack</b>
+<b>&#8226; Programming Language:</b> Python
+<b>&#8226; Core Library:</b> random (for random AI moves)
+<b>&#8226; Algorithms:</b> Searching for valid moves, calculating piece flips, and selecting the best move.
+
+<b>Challenges and Solutions</b>
+<b>&#8226; Valid Move Check:</b> The is_valid_move function was implemented to ensure that moves follow Othello's rules.
+<b>&#8226; Piece Flipping Logic:</b> The flip function was designed to correctly flip all opponent pieces that satisfy the conditions.
+<b>&#8226; Board Edge Handling:</b> The program ensures that moves at the board edges do not cause array index errors and crashes.
+<b>&#8226; Terminal Output Readability:</b> The get_board_as_string function was used to improve the display of the board, making the game more visually intuitive.
+
+<b>Future Improvements</b>
+<b>&#8226; Enhancing AI Intelligence:</b> Improving the AI logic to consider multiple turns ahead, rather than just flipping the most pieces.
+<b>&#8226; GUI Version:</b> Developing a graphical user interface using pygame or tkinter to make the game more interactive.
+<b>&#8226; Game History:</b> Saving game logs so players can review and analyze their strategies.
+
+This project demonstrates my skills in Python programming, algorithm design, and game logic implementation, and is still undergoing continuous improvements!

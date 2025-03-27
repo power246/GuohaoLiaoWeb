@@ -1,0 +1,36 @@
+<b>Overview</b>
+This is a Java-based card game simulation system that implements three different AI player strategies (random play, highest card first, lowest card first) under UNO-like rules. The system automates AI battles and analyzes their win rates using statistical methods.
+
+<b>Features</b>
+<b>&#8226; Multi-Strategy AI System</b>
+	<b>&#9702; Basic AI (AI.java):</b> Selects the first valid card randomly.
+	<b>&#9702; Aggressive Strategy (BiggestCardAI.java):</b> Prioritizes playing the highest-value valid card.
+	<b>&#9702; Conservative Strategy (SmallestCardAI.java):</b> Prioritizes playing the lowest-value valid card.
+	<b>&#9702; Strategy Reuse through Inheritance:</b> Parent AI class provides a base structure, while subclasses implement specific strategies.
+<b>&#8226; Complete Game Logic</b>
+	<b>&#9702; Card System (Card.java):</b> Supports the creation and validation of a standard 52-card deck.
+	<b>&#9702; Card Pile Management (CardPile.java):</b> Enforces play validation rules (must match suit or have a greater value).
+	<b>&#9702; Deck Control (Deck.java):</b> Implements the Fisher-Yates-Knuth shuffle algorithm for randomized shuffling.
+	<b>&#9702; Hand Management (Hand.java):</b> Supports dynamic card drawing and discarding operations.
+<b>&#8226; Data-Driven Testing</b>
+	<b>&#9702; Battle Simulator (UnoWarMatch.java):</b> Automates multiple rounds of AI battles.
+	<b>&#9702; Win Rate Statistics (Tournament.java):</b> Conducts 1,000 AI matchups to calculate win rates.
+
+<b>Tech Stack</b>
+<b>&#8226; Core Language:</b> Java
+<b>&#8226; Key Algorithms:</b>
+	<b>&#9702; Shuffling Algorithm:</b> Fisher-Yates-Knuth
+	<b>&#9702; Strategy Pattern:</b> Implemented via class inheritance
+<b>&#8226; Development Tools:</b> IntelliJ IDEA / Eclipse (depending on usage)
+
+<b>Challenges & Solutions</b>
+<b>&#8226; Code Reuse Across AI Strategies:</b> Defined a base AI class with a standard interface, allowing subclasses to override getPlay() for unique strategies.
+<b>&#8226; Card Validity Checks & Edge Cases:</b> Added parameter validation in the Card constructor and used flags to mark invalid cards.
+<b>&#8226; Performance Optimization for Large-Scale Simulations:</b> Implemented batch testing in UnoWarMatch.winRate() instead of running single-instance tests.
+
+<b>Future Improvements</b>
+<b>&#8226; Add GUI Visualization:</b> Develop an interactive interface to display battle progress.
+<b>&#8226; Expand Card Game Rules:</b> Introduce special UNO-style cards with unique effects.
+<b>&#8226; Player Win Rate Prediction Model:</b> Integrate machine learning frameworks to improve AI intelligence.
+
+This project demonstrates my expertise in object-oriented design, algorithm implementation, and data analysis. Future iterations could incorporate machine learning to enhance AI decision-making.

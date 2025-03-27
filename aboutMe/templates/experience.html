@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block title %}Experience: Paul(Guohao) Liao{% endblock %} 
+{% load static %}
+
+{% block bodyClass %} experienceBody {% endblock %}
+
+{% block hudButtons %}
+<button class="aboutMeButton">About Me</button>
+<button class="blogButton">Blog</button>
+<button class="experienceButton on">Experience</button>
+<button class="projectButton">Project</button>
+<button class="contactButton">Contact</button>
+{% endblock %}
+
+{% block pageName %}
+  EXP.
+{% endblock %}
+
+{% block content %}
+<div class="contentBox experienceHeight">
+  <div class="blogBoxes">
+    <div class="blogBox"> 
+      <h1 class="header">VEX Robotics Competition:</h1>
+      <p>VEX Robotics is a robotics program for elementary through university students.&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'vex' %}" class="hyperText">Personal Experience &#45;&#45;&gt;</a>
+      </p>
+    </div>
+    <div class="blogBox"> 
+      <h1 class="header">I only have an experience now. If I have anything else in the future, I'll add it here &#58;&#41;</h1>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
