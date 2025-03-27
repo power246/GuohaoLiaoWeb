@@ -11,6 +11,7 @@ body {
   height: 2500px;
   z-index: 0;
   overflow-y: auto;
+  min-height: 100vh
 }
 .baseBody {
   height: 1550px;
