@@ -2,10 +2,11 @@
 This project is a personal website built using Django as the backend framework, combined with HTML, CSS, and JavaScript for frontend development. The goal is to create a personal portfolio that presents my experiences, projects, and skills in a clean and visually appealing manner.
 
 <b>Features</b>
-<b>&#8226; Homepage:</b> A simple welcome page introducing my basic information.
-<b>&#8226; About Me:</b> A detailed introduction to my background, interests, and programming journey.
+<b>&#8226; About Me:</b> A simple welcome page introducing my basic information and detailed introduction to my background, interests, and programming journey.
+<b>&#8226; Blog:</b> A page showcasing the blog I have.
 <b>&#8226; Projects:</b> A dedicated page showcasing the projects I have worked on, including this website itself.
-<b>&#8226; Experience:</b> A section displaying my experience in VEX Robotics, programming, and other technical fields.
+<b>&#8226; Experience:</b> A page displaying my experience in VEX Robotics, programming, and other technical fields.
+<b>&#8226; Contact:</b> A page showcasing the email and other contact method.
 
 <b>Dynamic Content</b>
 &#8226; Utilizing Django's template system ({% block %}) to enable reusable web structures.
@@ -21,7 +22,7 @@ This project is a personal website built using Django as the backend framework, 
 <b>&#8226; Backend:</b> Django (Python)
 <b>&#8226; Frontend:</b> HTML, CSS, JavaScript
 <b>&#8226; Styling:</b> CSS Flexbox, Grid, and custom layouts
-<b>&#8226; Hosting:</b> (To be determined, potential options include GitHub Pages, Heroku, or AWS)
+<b>&#8226; Hosting:</b> On Render
 
 <b>Challenges & Solutions</b>
 <b>&#8226; Dynamic Text Formatting:</b> Initially, preserving formatting when reading text from .txt files was challenging. I solved this by using Python's .replace() method to convert specific text into HTML-compatible formats, ensuring proper line breaks and dynamically handling hyperlinks.
