@@ -46,4 +46,4 @@ A simple Push Box (Sokoban) game developed using Python and the pyphysicssandbox
 &#8226; 2D game logic design (coordinate system & state management)
 &#8226; User input handling & real-time rendering
 
-<b>Note:</b> This is an early prototype, and future updates will be made based on user feedback. If you encounter any issues, please check your library installation and Python version (recommended: 3.7+).
+<b>Note:</b> If you encounter any issues, please check your library installation and Python version (recommended: 3.7+).

@@ -1,18 +1,17 @@
 <b>Overview</b>
-This project is a music bot for Discord servers that supports playing YouTube audio and offers multiple playback modes. The bot allows users to create playlists and play music in Discord voice channels.
+This project is a music bot for Discord servers that supports playing YouTube audio (and other video player like Bilibili) and offers multiple playback modes. The bot allows users to create playlists and play music in Discord voice channels.
 
 <b>Features</b>
 <b>&#8226; Music Playback:</b> Supports extracting and playing audio from YouTube videos (including live streams).
 <b>&#8226; Playlist Management:</b> Users can add, remove, and view playlists, with options for sequential or shuffle playback.
 <b>&#8226; Playback Modes:</b> Supports single-track playback, playlist playback, single-track loop, and shuffle mode.
 <b>&#8226; Basic Controls:</b> Provides essential functions such as join/leave channel, play, pause, resume, and volume adjustment.
-<b>&#8226; Multi-language Support:</b> Includes a Chinese version (discord_bot.py) and an English version (discord_bot_en.py).
+<b>&#8226; Multi-language Support:</b> Includes a Chinese version (discord_bot.py) and an English version (discord_bot_en.py). The English version is on my GitHub page.
 
 
 <b>Tech Stack</b>
 <b>&#8226; Backend:</b> Python, Discord.py, yt-dlp (for extracting audio from YouTube).
 <b>&#8226; API Integration:</b> Uses Discord API for command control and yt-dlp for audio processing.
-<b>&#8226; Deployment (TBD):</b> Can be hosted on Heroku, AWS, VPS, or a local server.
 
 <b>Challenges & Solutions</b>
 <b>&#8226; Token Security:</b> The bot token is hidden, and users must manually replace it with their own token to run the program.
@@ -21,7 +20,7 @@ This project is a music bot for Discord servers that supports playing YouTube au
 
 <b>Future Improvements</b>
 &#8226; Optimize playback mode switching to allow seamless transitions during music playback.
-&#8226; Add more interactive features, such as lyrics display, music search, and automatic recommendations.
+&#8226; Add more interactive features, such as button operation, rather than instruction operation.
 &#8226; Support additional audio sources like Spotify and SoundCloud.
 &#8226; Enhance error handling to provide more user-friendly error messages and solutions.
 

@@ -7,7 +7,7 @@ A Python program designed to compute the resultant magnitude and angle of multip
 	<b>&#9702; Polar to Cartesian Conversion:</b> Converts input angles and magnitudes into X/Y components.
 	<b>&#9702; Angle Adjustment:</b> Automatically normalizes angles to the range 0°–360°.
 <b>&#8226; Version Iterations</b>
-	<b>&#9702; vector.2:</b> Supports addition of only two vectors.
+	<b>&#9702; vector.2:</b> Supports addition of only two vectors. (On my GitHub page)
 	<b>&#9702; vector.3 (Current):</b> Supports any number of vectors for continuous summation.
 <b>&#8226; User Interaction</b>
 	<b>&#9702; Dynamic Input:</b> Users can enter multiple vectors with their respective magnitudes and angles.

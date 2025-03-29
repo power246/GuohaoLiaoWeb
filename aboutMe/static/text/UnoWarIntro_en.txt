@@ -30,7 +30,7 @@ This is a Java-based card game simulation system that implements three different
 
 <b>Future Improvements</b>
 <b>&#8226; Add GUI Visualization:</b> Develop an interactive interface to display battle progress.
-<b>&#8226; Expand Card Game Rules:</b> Introduce special UNO-style cards with unique effects.
+<b>&#8226; Expand Card Game Rules:</b> Introduce special UNO-style cards with unique effects (like Balatro).
 <b>&#8226; Player Win Rate Prediction Model:</b> Integrate machine learning frameworks to improve AI intelligence.
 
 This project demonstrates my expertise in object-oriented design, algorithm implementation, and data analysis. Future iterations could incorporate machine learning to enhance AI decision-making.
