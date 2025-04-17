@@ -1,0 +1,19 @@
+	<b>Mar 2025 – Apr 2025</b>
+	<b>Role: Data Analyst & Presenter</b>
+
+	During my sophomore year, I participated in a month-long data analysis competition. This experience not only tested my programming skills, but also strengthened my abilities in data understanding, visualization design, and public speaking. After receiving a large and complex dataset from the organizers, we conducted in-depth analysis and ultimately presented our findings to a panel of professionals from various industries.
+
+	The competition involved much more than just coding. It required us to handle messy real-world data, design clear and informative visualizations, craft a compelling narrative, and confidently communicate our findings during a live presentation.
+
+	One of the most challenging parts was working with <b>unstructured, lengthy natural language fields</b>, such as “Rationale for Match” and “Closure Details.” These fields were composed of open-ended text with inconsistent formatting, making them difficult to analyze using traditional statistical methods. To address this, I designed and implemented a Natural Language Processing (NLP) pipeline in Python:
+
+	&#8226; <b>Preprocessing:</b> Cleaned the text using regular expressions and stopword filtering.
+	&#8226; <b>Feature Extraction:</b> Used TF-IDF vectorization to convert text into numerical vectors representing term importance.
+	&#8226; <b>Dimensionality Reduction:</b> Applied TruncatedSVD to compress the high-dimensional TF-IDF matrix while retaining key information.
+	&#8226; <b>Keyword Engineering:</b> Developed domain-specific keyword filters to transform text into interpretable categorical variables.
+
+	These engineered text features played a crucial role in our downstream analysis, such as predicting match success, identifying behavioral patterns, and observing year-over-year trends. I also took charge of creating visualizations like bar charts, word clouds, and heatmaps, and helped develop a presentation that could clearly communicate insights to a non-technical audience.
+
+	There was still room for improvement in our final presentation. After watching the winning teams, we realized our presentation focused too much on answering technical questions and not enough on addressing the real-world issues reflected in the data.
+
+	This competition taught me that effective data science is not just about writing good code — it's about <b>telling a story that drives impact</b>. Through this experience, I became more confident in handling messy datasets and more skilled in feature engineering and data storytelling.

@@ -1,4 +1,5 @@
 	<b>May 2021 - October 2023</b> 
+	<b>Role: Team Leader & Programmer</b>
 
 	This is my experience from a robotics competition I participated in during middle school, where we won a county-level second prize. Although I had some prior experience with robot programming, this was my first time participating in such a formal competition. I remember that the challenge was to design a robot to pick up a target ball from one bucket and throw it into another. Our team had prepared thoroughly for a second competition with a different theme—placing a ring onto a target pole—but due to the pandemic, we were unable to compete.
 

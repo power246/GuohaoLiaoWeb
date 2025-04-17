@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% block title %}MinneMUDAC: Paul(Guohao) Liao{% endblock %} 
+{% load static %}
+
+{% block bodyClass %} MUDAC {% endblock %}
+
+{% block hudButtons %}
+<button class="aboutMeButton">About Me</button>
+<button class="blogButton">Blog</button>
+<button class="experienceButton on">Experience</button>
+<button class="projectButton">Project</button>
+<button class="contactButton">Contact</button>
+{% endblock %}
+
+{% block pageName %}
+    MUDAC
+{% endblock %}
+
+{% block content %}
+<div class="contentBox vexHeight">
+    <div class="back">
+        <p>
+            <a href="{% url 'experience' %}" class="hyperText">&lt;&#45;&#45; BACK</a>
+        </p>
+    </div>
+    <div class="detailBoxes">
+        <div class="detail">
+            <h1 class="header">MinneMUDAC Student Data Challenge:</h1>
+            <p>
+                <figure class="image-left">
+                    <b># Click on the file to open it #</b>
+                    <img class="image" src="{% static 'images/MinneMUDACGroup.jpg' %}" alt="VEX Programming">
+                    <figcaption>The group photo, I'm the second from the right</figcaption>
+                    <img class="image" src="{% static 'images/MinneMUDACGraph.png' %}" alt="VEX Robot">
+                    <figcaption>One of the many graphs we have</figcaption>
+                    <img class="image" src="{% static 'images/MinneMUDACWords.png' %}" alt="VEX Robot">
+                    <figcaption>One of the many graphs about NLP we have</figcaption>
+                    <span class="hyperText" onclick="openMUDACFunctions()">📄 MUDACFunctions.py</span>
+                </figure>
+                {{ MinneMUDAC_en|safe }}
+            </p>
+            <p>
+                <a href="https://minneanalytics.org/minnemudac/" class="hyperText" target="_blank">MinneMUDAC Student Data Science Challenge Official Web &#45;&#45;&gt;</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="modal-bg" onclick="closeModal()"></div>
+<div class="modal MUDACFunctions">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>MUDACFunctions.py</h2>
+    <pre><code>{{ MUDACFunctions }}</code></pre>
+</div>
+{% endblock %}

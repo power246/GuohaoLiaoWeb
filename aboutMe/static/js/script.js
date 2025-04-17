@@ -104,6 +104,11 @@ function openModalBa() {
   document.querySelector(".modal-bg").style.display = "block";
 }
 
+function openMUDACFunctions() {
+  document.querySelector(".modal.MUDACFunctions").style.display = "block";
+  document.querySelector(".modal-bg").style.display = "block";
+}
+
 function openModalThisWeb() {
   document.querySelector(".modal.thisWeb").style.display = "block";
   document.querySelector(".modal-bg").style.display = "block";

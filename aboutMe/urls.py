@@ -14,4 +14,5 @@ urlpatterns = [
     path('thisWebPage/', views.thisWebPage, name='thisWebPage'),  # thisWebPage
     path('unowar/', views.unowar, name='unowar'),  # unowar
     path('vectorCalculator/', views.vectorCalculator, name='vectorCalculator'),  # vectorCalculator
+    path('dataChallenge/', views.dataChallenge, name='dataChallenge'),  # dataChallenge
 ]

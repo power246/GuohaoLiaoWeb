@@ -49,6 +49,23 @@ def vex(request):
         vex_en = "error: file not found"
     return render(request, 'vex.html', {'vex_en': vex_en})
 
+def dataChallenge(request):
+    MinneMUDAC_en_path = os.path.join(settings.BASE_DIR, 'aboutMe/static/text/MinneMUDAC_en.txt')
+    MUDACFunctions_file_path = os.path.join(settings.BASE_DIR, 'aboutMe/static/text/MUDACFunctions.py')
+    try:
+        with open(MUDACFunctions_file_path, 'r', encoding='utf-8') as MUDACFunctions_file:
+            MUDACFunctions = MUDACFunctions_file.read()
+    except FileNotFoundError:
+        MUDACFunctions = "error: file not found"
+    try:
+        with open(MinneMUDAC_en_path, 'r', encoding='utf-8') as MinneMUDAC_en_file:
+            MinneMUDAC_en = MinneMUDAC_en_file.read()
+            MinneMUDAC_en = MinneMUDAC_en.replace('\n', '<br>')
+            MinneMUDAC_en = MinneMUDAC_en.replace('\t', '&nbsp;&nbsp;&nbsp;&nbsp;')
+    except FileNotFoundError:
+        MinneMUDAC_en = "error: file not found"
+    return render(request, 'dataChallenge.html', {'MUDACFunctions': MUDACFunctions, 'MinneMUDAC_en': MinneMUDAC_en,})
+
 def discordMusicPlayerBot(request):
     dcBotIntro_en_path = os.path.join(settings.BASE_DIR, 'aboutMe/static/text/dcBotIntro_en.txt')
     dcBot_path = os.path.join(settings.BASE_DIR, 'aboutMe/static/text/dc_bot.py')
